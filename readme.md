@@ -1,0 +1,3 @@
+== README 
+
+  In the fall of 2015, when I was getting more serious about coding, I really wanted to understand classes and object more. I felt that I had a good basic understanding of them but I wanted to know how to create two or more classes and then have the objects that those classes created interact. That is what I am doing in this very simple game. It was the first time that I understand how to make two objects, from seperate classes do things to each other. 
