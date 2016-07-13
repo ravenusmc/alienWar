@@ -5,6 +5,7 @@ class Human():
   def __init__(self, name):
     self.name = name 
     self.life = 10
+    self.distance = 15
 
   def attack(self, enemy):
     hit = random.randint(1,10)
@@ -14,3 +15,8 @@ class Human():
       print(enemy.life)
     else:
       print("You missed")
+
+  def run(self):
+    print("You are running to towards the bunker")
+    self.distance -= 3
+    print("Distance to the bunker is " + str(self.distance) + "feet")
