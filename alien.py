@@ -8,8 +8,8 @@ class Alien():
 
   def attack(self, enemy):
     hit = random.randint(1,10)
-    if hit >= 8:
-      print("You hit the enemy")
+    if hit >= 5:
+      print("The Alien hits you")
       enemy.life -= 5
     else:
-      print("You missed")
+      print("The Alien shot at you but missed")

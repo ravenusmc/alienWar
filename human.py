@@ -19,4 +19,4 @@ class Human():
   def run(self):
     print("You are running to towards the bunker")
     self.distance -= 3
-    print("Distance to the bunker is " + str(self.distance) + "feet")
+    print("Distance to the bunker is " + str(self.distance) + " feet")
