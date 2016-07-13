@@ -4,7 +4,15 @@ from alien import Alien
 
 #Functions that are not critical to the playing of the game go here. 
 
-
+def help():
+  print("\n")
+  print("This is a very simple text adventure game.")
+  print("You will choose to play as either the human or the alien")
+  print("The goal is to either kill your opponent or get to safety")
+  print("For the human safety is the bunker for the alien it is its ship")
+  print("Please be aware though that the game is based on random numbers")
+  print("Thus, if you choose to shoot at your opponet it may not always hit the opponet")
+  main()
 
 #This function is where the human will battle it at with the alien. 
 def human_battle():
