@@ -24,13 +24,7 @@ def human_battle():
   print("There is an alien in front of you")
   action = input("What will you do run to bunker or shot it? (run / shoot)")
 
-  #I have to add the alien factors in here as well! 
-  while human.distance > 0 or human.life > 0:
-    #Add alien factors here as well!!!!
-    if human.distance == 0:
-      human.life = 0
-    elif human.life == 0:
-      human.distance = 0
+  while human.distance > 0 or human.life > 0 or alien.life > 0:
 
     if action == "run":
       human.run()
@@ -39,10 +33,18 @@ def human_battle():
       human.attack(alien)
       alien.attack(human)
 
+    if human.distance == 0:
+      break
+    elif human.life == 0:
+      break
+    elif alien.life == 0:
+      break
+
     print("Distance to bunker is: " + str(human.distance) + " feet!")
     print("Human Life is: " + str(human.life))
-    print("Alien life is: " + str(alien.life))  
-    action = input("What will you do run to bunker or shot it? (run / shoot)")
+    print("Alien life is: " + str(alien.life)) 
+
+    action = input("What will you do run to bunker or shot it? (run / shoot) ")
 
 
 #Main function that will start the game. 

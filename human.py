@@ -12,7 +12,6 @@ class Human():
     if hit >= 5:
       print("You hit the enemy")
       enemy.life -= 5
-      print(enemy.life)
     else:
       print("You missed")
 
