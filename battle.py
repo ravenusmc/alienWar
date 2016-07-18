@@ -43,13 +43,13 @@ def chooseSide():
 
 #This function is where the human will battle the alien. 
 def human_battle():
-  human = Human("Mike")
-  alien = Alien("Blob")
+  human = Human()
+  alien = Alien()
 
   print("There is an alien in front of you")
   action = input("What will you do run to bunker or shot it? (run / shoot): ")
 
-  while human.distance > 0 or human.life > 0 or alien.life > 0:
+  while human.distance > 0 or human.health > 0 or alien.lifeForce > 0:
 
     if action == "run":
       human.run()
@@ -62,36 +62,36 @@ def human_battle():
       print("You made it to the bunker!")
       print("The Game is now over!")
       break
-    elif human.life == 0:
+    elif human.health == 0:
       print("The Alien kills you!")
       print("The Game is now over!")
       break
-    elif alien.life == 0:
+    elif alien.lifeForce == 0:
       print("You killed the Alien!")
       print("The Game is now over!")
       break
 
     print("Distance to bunker is: " + str(human.distance) + " feet!")
-    print("Human Life is: " + str(human.life))
-    print("Alien life is: " + str(alien.life)) 
+    print("Human Life is: " + str(human.health))
+    print("Alien life is: " + str(alien.lifeForce)) 
 
     action = input("What will you do run to bunker or shot it? (run / shoot) ")
 
 #This function is where the alien will battle the human. 
 def alien_battle():
-  human = Human("Mike")
-  alien = Alien("Blob")
+  human = Human()
+  alien = Alien()
 
   print("There is an human in front of you")
   action = input("What will you do run to ship or shot the human? (run / shoot): ")
 
-  while alien.distance > 0 or human.life > 0 or alien.life > 0:
+  while alien.distance > 0 or human.health > 0 or alien.lifeForce > 0:
 
     if action == "run":
       alien.run()
       human.attack(human)
     elif action == "shoot":
-      alien.attack(human)
+      alien.alienAttack(human)
       human.attack(alien)
       
 
@@ -99,18 +99,18 @@ def alien_battle():
       print("You made it to the ship!")
       print("The Game is now over!")
       break
-    elif human.life == 0:
+    elif human.health == 0:
       print("You killed the human!")
       print("The Game is now over!")
       break
-    elif alien.life == 0:
+    elif alien.lifeForce == 0:
       print("The human kills you!")
       print("The Game is now over!")
       break
 
     print("Distance to ship is: " + str(alien.distance) + " feet!")
-    print("Human Life is: " + str(alien.life))
-    print("Alien life is: " + str(human.life)) 
+    print("Human Life is: " + str(human.health))
+    print("Alien life is: " + str(alien.lifeForce)) 
 
     action = input("What will you do run to bunker or shot the human? (run / shoot) ")
 
